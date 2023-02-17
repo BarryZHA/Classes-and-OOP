@@ -35,20 +35,28 @@ NameOfItem = 'The Octobreakfast'
 cost = 18
 customerid = 569 
 trans2 = fc.Transaction(date,NameOfItem,cost,customerid)
+trans2.total_cost(dict,customerid)
+trans2.member_discount(memberstat,trans2.get_total_cost())
+print("Total Cost: " + str(trans2.get_total_cost()))
+print("Member Discount: " + str(trans2.get_discount()))
+print("Total Cost After Discount: " + str(trans2.get_cost_after_discount()))
 
 date = '2/15/2023'
 NameOfItem = 'The Octoveg'
 cost = 16
 customerid = 570
-trans3 = fc.Transaction(date,NameOfItem,cost,customerid)
 
 date = '2/15/2023'
 NameOfItem = 'The Octoburger'
 cost = 20
 customerid = 570
 trans4 = fc.Transaction(date,NameOfItem,cost,customerid)
-
-fc.Customer.get_transaction(dict,cust_id)
+trans4 = fc.Transaction(date,NameOfItem,cost,customerid)
+trans4.total_cost(dict,customerid)
+trans4.member_discount(memberstat,trans4.get_total_cost())
+print("Total Cost: " + str(trans4.get_total_cost()))
+print("Member Discount: " + str(trans4.get_discount()))
+print("Total Cost After Discount: " + str(trans4.get_cost_after_discount()))
 
 order_total = 0
 
