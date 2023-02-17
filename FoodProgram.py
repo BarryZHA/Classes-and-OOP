@@ -16,10 +16,6 @@ phone = "254-555-2273"
 memberstat = True
 customer1 = fc.Customer(cust_id,name,address,email,phone,memberstat)
 
-# this dictionary represents transactions. The key of the dictionary is the transaction identifier.
-# The Value of the dictionary is a list. The elements in each list are -
-# ['Date', 'Name of item', 'Cost', 'customerid' ]
-
 dict = {'trans1':['2/15/2023','The Lone Patty',17,569],
                 'trans2':['2/15/2023','The Octobreakfast',18,569],
                 'trans3':['2/15/2023','The Octoveg',16,570],
@@ -38,9 +34,6 @@ customerid = 569
 trans2 = fc.Transaction(date,NameOfItem,cost,customerid)
 trans2.total_cost(dict,customerid)
 trans2.member_discount(memberstat,trans2.get_total_cost())
-print("Total Cost: $" + format(trans2.get_total_cost(),'.2f'))
-print("Member Discount: $" + str(trans2.get_discount()))
-print("Total Cost After Discount: $" + str(trans2.get_cost_after_discount()))
 
 # date = '2/15/2023'
 # NameOfItem = 'The Octoveg'
@@ -55,7 +48,13 @@ print("Total Cost After Discount: $" + str(trans2.get_cost_after_discount()))
 # trans4 = fc.Transaction(date,NameOfItem,cost,customerid)
 # trans4.total_cost(dict,customerid)
 # trans4.member_discount(memberstat,trans4.get_total_cost())
-# print("Total Cost: " + str(trans4.get_total_cost()))
+
+print("Customer Name: ", name)
+print("Phone: ", phone)
+print("Total Cost: $" + format(trans2.get_total_cost(),'.2f'))
+print("Member Discount: $" + str(trans2.get_discount()))
+print("Total Cost After Discount: $" + str(trans2.get_cost_after_discount()))
+# print("Total Cost: " + format(trans4.get_total_cost(),'.2f')
 # print("Member Discount: " + str(trans4.get_discount()))
 # print("Total Cost After Discount: " + str(trans4.get_cost_after_discount()))
 
