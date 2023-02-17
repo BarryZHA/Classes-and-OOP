@@ -38,7 +38,7 @@ class Transaction:
         return self.__totalcost
 
     def get_discount(self): 
-        return self.__memberdiscount
+        return format(self.__memberdiscount,'.2f')
     
     def get_cost_after_discount(self): 
-        return self.__costafterdiscount
+        return format(self.__costafterdiscount,'.2f')
