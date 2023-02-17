@@ -35,19 +35,19 @@ trans2 = fc.Transaction(date,NameOfItem,cost,customerid)
 trans2.total_cost(dict,customerid)
 trans2.member_discount(memberstat,trans2.get_total_cost())
 
-# date = '2/15/2023'
-# NameOfItem = 'The Octoveg'
-# cost = 16
-# customerid = 570
+date = '2/15/2023'
+NameOfItem = 'The Octoveg'
+cost = 16
+customerid = 570
 
-# date = '2/15/2023'
-# NameOfItem = 'The Octoburger'
-# cost = 20
-# customerid = 570
-# trans4 = fc.Transaction(date,NameOfItem,cost,customerid)
-# trans4 = fc.Transaction(date,NameOfItem,cost,customerid)
-# trans4.total_cost(dict,customerid)
-# trans4.member_discount(memberstat,trans4.get_total_cost())
+date = '2/15/2023'
+NameOfItem = 'The Octoburger'
+cost = 20
+customerid = 570
+trans4 = fc.Transaction(date,NameOfItem,cost,customerid)
+trans4 = fc.Transaction(date,NameOfItem,cost,customerid)
+trans4.total_cost(dict,customerid)
+trans4.member_discount(memberstat,trans4.get_total_cost())
 
 print("Customer Name: ", name)
 print("Phone: ", phone)
