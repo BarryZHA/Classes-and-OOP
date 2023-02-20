@@ -8,37 +8,31 @@ class Customer:
         self.__phone = phone
         self.__memberstat = memberstat
 
+    def get_customerid(self): 
+        return self.__cust_id
+    def get_name(self): 
+        return self.__name
+    def get_address(self): 
+        return self.__address
+    def get_email(self): 
+        return self.__email
+    def get_phone(self): 
+        return self.__phone
+    def get_memberstat(self): 
+        return self.__memberstat
+    
 class Transaction:
     def __init__(self, date, item_name, cost, cust_id):
         self.__date = date
         self.__item_name = item_name
         self.__cost = cost
         self.__cust_id = cust_id
-        self.__totalcost = 0
-        self.__memberdiscount = 0
-        self.__costafterdiscount = 0
-
-    def total_cost(self, transaction, customerid):
-        for n in transaction:
-            if transaction[n][3] == customerid:
-                self.__totalcost += transaction[n][2]
-
-    def member_discount(self,memberstat,totalcost):
-        if memberstat == True: 
-            self.__memberdiscount = totalcost * 0.2
-            self.__costafterdiscount = totalcost - self.__memberdiscount
-
-    # def total_cost(self, transaction, customerid):
-    #     for n in transaction:
-    #         match transaction[n][3]:
-    #             case customerid:
-    #                 self.__totalcost += transaction[n][2]
     
-    def get_total_cost(self): 
-        return self.__totalcost
-
-    def get_discount(self): 
-        return format(self.__memberdiscount,'.2f')
-    
-    def get_cost_after_discount(self): 
-        return format(self.__costafterdiscount,'.2f')
+    def get_date(self): 
+        return self.__date
+    def get_itemname(self): 
+        return self.__item_name
+    def get_cost(self): 
+        return self.__cost
+    def get_custid(self): 
+        return self.__cust_id
